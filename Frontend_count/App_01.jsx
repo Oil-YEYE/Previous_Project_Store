@@ -1,6 +1,6 @@
 import { useState } from "react";  
   
-  
+  //A simple count web
   function App(){
 
     const [count, setCount] = useState(0);
