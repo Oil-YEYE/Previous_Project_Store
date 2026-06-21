@@ -1,0 +1,44 @@
+.bod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.timer{
+    padding: 20px;
+    font-size: 48px;
+}
+.startBtn{
+    padding: 12px 60px;
+    border: none;
+    background-color: white;
+    border-radius: 6px;
+}
+.startBtn:hover{
+    background-color: #f0f0f0;  
+    cursor: pointer; 
+}
+
+.overlay{
+    display: none;
+    font-size: 38px;
+}
+.choice{
+    display: flex;
+    gap: 50px;
+
+}
+.choice button{
+    width: 80px;
+    height: 34px;
+    font-size: 16px;
+    border: none;
+    background-color: white;
+    border-radius: 6px;
+}
+.choice button:hover{
+    background-color: #f0f0f0;  
+    cursor: pointer; 
+}

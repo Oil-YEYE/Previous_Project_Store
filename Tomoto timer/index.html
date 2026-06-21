@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tomato Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bod">
+    <div class="overlay">
+        Please leave your computer to relax your eyes.
+    </div>
+
+    <div class="choice">
+    <button>30</button>
+    <button>45</button>
+    <button>60</button>
+    </div>
+    <div class="timer" >25:00</div>
+    <button class="startBtn" id="startBtn" >Start</button>
+
+    <script>
+        const timerElement = document.querySelector('.timer')
+        const startButton = document.getElementById('startBtn')
+        const overlay = document.querySelector('.overlay')
+        const choice = document.querySelector('.choice')
+        Notification.requestPermission()
+
+        let totalsec= 25 * 60
+        let totalsecText = '25'
+        
+        //Display countdown func
+        function updateDisplay (){
+            const minutes = Math.floor(totalsec / 60)
+            const seconds = totalsec % 60
+            timerElement.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        //Exit Fullscreen after ten minutes func
+        function showR(){
+            overlay.style.display = "flex"
+            startBtn.style.display = "none"
+            choice.style.display = "none"
+            timerInterval2 = setInterval(function(){
+                totalsec--
+                updateDisplay()
+                if(totalsec <= 0){
+                    overlay.style.display = "none"
+                    choice.style.display = "flex"
+                    startBtn.style.display = "flex"
+                    totalsec= Number(totalsecText) * 60
+                    timerElement.textContent = `${totalsecText}:00`
+                    clearInterval(timerInterval2)
+                }
+            },1000)
+        }
+
+        let timerInterval = null;
+
+        choice.addEventListener('click',function(e){
+            if(e.target.textContent === '30' ){
+                totalsec = 30 * 60
+                totalsecText = '30'
+                updateDisplay()
+            }
+            if(e.target.textContent === '45' ){
+                totalsec = 45 * 60
+                totalsecText = '45'
+                updateDisplay()
+            }
+            if(e.target.textContent === '60' ){
+                totalsec = 60 * 60
+                totalsecText = '60'
+                updateDisplay()
+            }
+        })
+
+        function showNotification(){
+
+            new Notification("Tomato Timer",{
+                body:"25 minutes arrived."
+            })
+
+        }
+
+        startButton.addEventListener('click',function(){
+            if(timerInterval !== null){
+                return
+            }
+        
+
+            timerInterval = setInterval(function(){
+                totalsec--
+                
+
+                updateDisplay()
+
+                if(totalsec <=0){
+                    clearInterval(timerInterval)
+                    timerInterval = null
+                    timerElement.textContent = "10:00"
+                    totalsec = 10 * 60
+                    showNotification()
+                    showR()
+                }
+            },1000)
+        })
+
+
+
+    </script>
+
+
+</body>
+</html>
