@@ -3,10 +3,9 @@
  
 ---
 
-  # About me (●'◡'●)
+  # About this (●'◡'●)
    
-  - I am studying Agent project to be a real engineer.
+  - I am studying Agent project to be a engineer.
    
-  - One project by project,I trust i can do that.
-   
-  - Here i will record all my project i have done.
+  - So here i recorded all my project i have done.
+
