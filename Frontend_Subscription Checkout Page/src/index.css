@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.backg{
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./assets/0.jpg");
+
+  background-size: cover;
+
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+}
+
+.backg-inside{
+  border-radius: 20px;
+  background-color: white;
+  height: 540px;
+  width: 970px;
+  padding: 30px 0px 30px 30px;
+}
+
+.backg-inside-right{
+  position:relative;
+  left: 520px;
+  bottom: 548px;
+  background-color: rgb(231, 238, 245);
+  height: 560px;
+  width: 450px;
+  border-radius: 10px;
+
+  /* After adding this, padding can't affect the size. */
+  box-sizing: border-box; 
+
+  padding: 30px 30px;
+}
+.logo{
+  height: auto;
+  width: 100px;
+}
+
+.backg-inside > :nth-child(3){
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  color: rgb(118, 118, 118)
+}
+.grey{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(118, 118, 118)
+}
+.input{
+  width: 450px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid rgb(172, 172, 172);
+  padding-left: 10px;
+  outline: none;
+}
+.input:focus{
+  border: 1px solid rgb(41, 41, 41);
+}
+
+
+.container{
+  display: flex;
+  gap: 20px;
+  width: 462px;
+}
+.small-box{
+  flex: 1;
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 5px;
+  height: 70px;
+}
+.small-box:hover{
+  cursor: pointer;
+}
+.small-box.active{
+  background-image: linear-gradient(
+  rgba(117, 62, 228, 0.10),
+  rgba(117, 62, 228, 0.10)
+  );
+  border: 1.6px solid #9221b1;
+}
+.small-box-symbol{
+  flex: 1;
+  margin-top: 4px;
+  margin-left: 12px;
+  display: block;
+  font-size: 21px;
+}
+.small-box-text{
+  font-weight: bold;
+
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.row{
+  display: flex;
+  gap: 30px;
+  width: 462px;
+}
+.button-two-1{
+  flex: 1;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(172, 172, 172);
+  height: 45px;
+  box-sizing: border-box;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  text-align: left;
+  text-indent: 12px;
+
+  display: flex;
+  align-items: center;
+}
+.input-two-2{
+  flex: 1;
+  border-radius: 5px;
+  border: 1px solid rgb(172, 172, 172);
+  height: 45px;
+  padding-left: 10px;
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+.row-2{
+  margin-top: 30px;
+  display: flex;
+  width: 462px;
+  height: 40px;
+  gap: 20px;
+
+}
+.btn-1{
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+
+  font-weight: bold;
+  font-size: 14px;
+}
+.btn-2{
+  flex: 1;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  background-color: #753EE4;
+  color: white;
+}
+.btn-1:hover,
+.btn-2:hover{
+  cursor: pointer;
+}
+
+
+
+.black{
+  font-weight: bold;
+
+  font-size: 15px;
+
+  margin-bottom: 10px;
+}
+.Pay-box{
+  background-color: white;
+  height: 70px;
+  width: 390px;
+
+  border-radius: 15px;
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  box-sizing: border-box;
+  padding: 20px;
+  gap: 20px;
+}
+.Pay-box.active {
+  border: 1.5px solid #9221b1;
+  box-shadow: 6px 6px 8px rgba(117, 62, 228, 0.5);
+}
+.circle{
+  font-size: 20px;
+  color: rgb(172, 172, 172);
+}
+.Pay-box.active .circle {
+  color: #8b5cf6;
+}
+.Pay-box-text{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.Pay-box-texttitle{
+  font-weight: bold;
+  font-size: 16px;
+}
+.Pay-box-textprice{
+  color: rgb(118, 118, 118);
+  font-size: 12px;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgb(208, 208, 208);
+  margin: 26px 0;
+}
+
+.black-2{
+  font-weight: bold;
+
+  font-size: 20px;
+}
+
